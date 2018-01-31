@@ -20,5 +20,15 @@ public class DemoApplication {
     public String hello(@RequestParam(value="name", defaultValue = "World") String name) {
         return String.format("Hello, %s!", name);
     }
+    
+    @RequestMapping(value="/isAlive",method = RequestMethod.GET)
+    public String isAlive() {
+        return "Alive and kicking!";
+    }
 
+    @RequestMapping(value="/isReady",method = RequestMethod.GET)
+    public String isReady() {
+        return "Ready to go!";
+    }
+    
 }
